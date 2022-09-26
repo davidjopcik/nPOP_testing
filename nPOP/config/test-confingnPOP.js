@@ -5,7 +5,7 @@ export const config = {
     services: [
         ['appium', {
         args:{
-            adress: '127.0.0.1',
+            adress: 'localhost',
             port:4723
         },
         logPath: './'
