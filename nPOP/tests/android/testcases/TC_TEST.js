@@ -1,6 +1,7 @@
 import EvodMainScreen from "../Methods/EvodMainScreen";
 import HomeScreen from "../Methods/HomeScreen";
 import OpenApp from "../Methods/OpenApp";
+import Svod from "../Methods/Svod";
 import TrainLog from "../Methods/TrainLog";
 import TrainNumberInsert from "../Methods/TrainNumberInsert";
 import VehiclesAndDrivers from "../Methods/VehiclesAndDrivers";
@@ -13,6 +14,8 @@ export let Test_Data = {
     vehicles: "955678120028",
     HKVType: "V - vlakové",
     trainDriverNumber: "1714",
+    vehicleWagonorderBreakpercentage: "85",
+    trainBreakingMode: "R+Mg"
 }
 
 let e = Test_Data
@@ -39,6 +42,11 @@ describe('TEST"', () => {
 
     it('Vozidlá a rušňovodiči',async () => {
         await VehiclesAndDrivers.addVehiclesAndDrivers(e.vehicles, e.HKVType, e.trainDriverNumber)
+    });
+
+    it.only('SVOD',async () => {
+        await Svod.svod(e.vehicleWagonorderBreakpercentage, e.trainBreakingMode)
+        await Svod.svodPrintClose()
     });
     
 });
