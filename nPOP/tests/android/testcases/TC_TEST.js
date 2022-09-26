@@ -57,8 +57,12 @@ describe('TEST"', () => {
         await Sob.sobPrintClose()
     });
 
-    it.only('Odchod vlaku',async () => {
+    it('Odchod vlaku',async () => {
         await TrainDeparture.trainDeparture()
+    });
+
+    it.only('Sync',async () => {
+        await EvodMainScreen.mainEvodSyncClick()
     });
     
 });
