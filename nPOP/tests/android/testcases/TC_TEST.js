@@ -44,7 +44,7 @@ describe('TEST"', () => {
         await VehiclesAndDrivers.addVehiclesAndDrivers(e.vehicles, e.HKVType, e.trainDriverNumber)
     });
 
-    it.only('SVOD',async () => {
+    it('SVOD',async () => {
         await Svod.svod(e.vehicleWagonorderBreakpercentage, e.trainBreakingMode)
         await Svod.svodPrintClose()
     });
