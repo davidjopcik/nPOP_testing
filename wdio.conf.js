@@ -57,6 +57,7 @@ exports.config = {
         maxInstances: 5,
         //
         browserName: 'chrome',
+        appium: { command: 'appium' },
         acceptInsecureCerts: true
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
@@ -71,7 +72,7 @@ exports.config = {
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'info',
-    appium: { command: 'appium' },
+    
     //
     // Set specific log levels per logger
     // loggers:
