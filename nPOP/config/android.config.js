@@ -19,6 +19,7 @@ config.capabilities = [{
 
         // ---- TESTS -----
         "nPOP/tests/android/testcases/TC_TEST.js",
+        //"nPOP/tests/android/testcases/TC_TEST.js",
 
     ],
 
