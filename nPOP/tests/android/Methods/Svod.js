@@ -1,3 +1,4 @@
+import BasicFunction from "./BasicFunction"
 import Swipe from "./Swipe"
 
 export let trainBreakingModeSelect
@@ -60,11 +61,10 @@ class Svod {
             await $('//*[@text="POTVRDIŤ"]').click()
         }
     } 
-
-    async svodPrintClose(){
-        await $('~Prejsť nahor').click()
-    }
     
+    async svodPrintClose(){
+        await BasicFunction.closeBtn()
+    }
 
     }
 

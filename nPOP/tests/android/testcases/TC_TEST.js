@@ -1,7 +1,10 @@
+import BasicFunction from "../Methods/BasicFunction";
 import EvodMainScreen from "../Methods/EvodMainScreen";
 import HomeScreen from "../Methods/HomeScreen";
 import OpenApp from "../Methods/OpenApp";
+import Sob from "../Methods/Sob";
 import Svod from "../Methods/Svod";
+import TrainDeparture from "../Methods/TrainDeparture";
 import TrainLog from "../Methods/TrainLog";
 import TrainNumberInsert from "../Methods/TrainNumberInsert";
 import VehiclesAndDrivers from "../Methods/VehiclesAndDrivers";
@@ -47,6 +50,15 @@ describe('TEST"', () => {
     it('SVOD',async () => {
         await Svod.svod(e.vehicleWagonorderBreakpercentage, e.trainBreakingMode)
         await Svod.svodPrintClose()
+    });
+
+    it('SOB',async () => {
+        await Sob.sob()
+        await Sob.sobPrintClose()
+    });
+
+    it.only('Odchod vlaku',async () => {
+        await TrainDeparture.trainDeparture()
     });
     
 });
