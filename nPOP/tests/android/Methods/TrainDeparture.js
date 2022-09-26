@@ -1,9 +1,7 @@
 import BasicFunction from "./BasicFunction"
 
 class TrainDeparture{
-    get trainDepartureSelector() {
-        return $('//*[@resource-id="sk.prosoft.ptt.pop:id/ll_evod_departure"]')
-    } 
+
     get departureTimeSelector() {
         return $('//*[@resource-id="sk.prosoft.ptt.pop:id/tv_layout_edittext_text" and contains(@text, "Čas odchodu")]')
     } 
@@ -15,7 +13,6 @@ class TrainDeparture{
 
 
     async trainDeparture(){
-        await this.trainDepartureSelector.click()
         await expect(BasicFunction.confirmBtnSelector).toBeDisabled()
         await this.departureTimeNowSelector.click()
         await expect(BasicFunction.confirmBtnSelector).toBeEnabled()

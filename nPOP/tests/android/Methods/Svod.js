@@ -4,9 +4,7 @@ import Swipe from "./Swipe"
 export let trainBreakingModeSelect
 
 class Svod {
-    get evodSvodBtn() {
-        return $('//*[@resource-id="sk.prosoft.ptt.pop:id/ll_evod_svod"]')
-    }
+    
     get vehicleWagonorderBreakpercentageSelector() {
         return $('//*[@resource-id="sk.prosoft.ptt.pop:id/et_evod_vehicle_wagonorder_breakpercentage"]')
     }
@@ -30,7 +28,6 @@ class Svod {
 
 
     async svod(vehicleWagonorderBreakpercentage, trainBreakingMode ){
-        await this.evodSvodBtn.click()
         
         //POTVRDIŤ Disable
         if(!await this.confirmVehicleSvod.isDisplayed()){

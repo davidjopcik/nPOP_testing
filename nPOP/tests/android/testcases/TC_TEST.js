@@ -40,28 +40,33 @@ describe('TEST"', () => {
     });
 
     it('Súpis vlaku',async () => {
+        await EvodMainScreen.trainLogOpenClick()
         await TrainLog.trainLogOpen()
     });
 
     it('Vozidlá a rušňovodiči',async () => {
+        await EvodMainScreen.vehiclesAndDriversOpenClick()
         await VehiclesAndDrivers.addVehiclesAndDrivers(e.vehicles, e.HKVType, e.trainDriverNumber)
     });
 
     it('SVOD',async () => {
+        await EvodMainScreen.svodOpenClick()
         await Svod.svod(e.vehicleWagonorderBreakpercentage, e.trainBreakingMode)
         await Svod.svodPrintClose()
     });
 
     it('SOB',async () => {
+        await EvodMainScreen.sobOpenClick()
         await Sob.sob()
         await Sob.sobPrintClose()
     });
 
     it('Odchod vlaku',async () => {
+        await EvodMainScreen.trainDepartureClick()
         await TrainDeparture.trainDeparture()
     });
 
-    it.only('Sync',async () => {
+    it('Sync',async () => {
         await EvodMainScreen.mainEvodSyncClick()
     });
     

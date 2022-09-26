@@ -1,9 +1,7 @@
 import BasicFunction from "./BasicFunction"
 
 class Sob {
-    get sobOpenBtn() {
-        return $('//*[@resource-id="sk.prosoft.ptt.pop:id/ll_evod_sob"]')
-    }
+    
     get sobVehiclesSelector() {
         return $('//*[@resource-id="sk.prosoft.ptt.pop:id/tv_fragment_evod_sob_report_title2" and contains(@text, "Vozidlá s vyskúšanou ručnou brzdou")]')
     } 
@@ -20,7 +18,6 @@ class Sob {
 
 
     async sob(){
-        await this.sobOpenBtn.click()
         await this.sobVehiclesSelector.click()
         await this.selectAll.click()
         await this.confirmVehiclesSob.click()

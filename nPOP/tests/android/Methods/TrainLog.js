@@ -2,9 +2,6 @@ import Swipe from "./Swipe"
 
 class TrainLog {
 
-    get trainLogBtn(){
-        return $('//*[@resource-id="sk.prosoft.ptt.pop:id/ll_evod_trainlog"]')
-    }
     get openMainTrainlog(){
         return $('//*[@resource-id="sk.prosoft.ptt.pop:id/main_train_log"]')
     }
@@ -16,7 +13,6 @@ class TrainLog {
     }
 
     async trainLogOpen(){
-        await this.trainLogBtn.click()
         await this.openMainTrainlog.waitForDisplayed()
         await this.openMainTrainlog.click()
         await this.trainChiefContact.waitForDisplayed()

@@ -3,9 +3,6 @@ export let licenceEIN
 
 class VehiclesAndDrivers {
 
-    get vehiclesAndDriversSelector () {
-        return $('//*[@resource-id="sk.prosoft.ptt.pop:id/ll_evod_vehicles_and_drivers"]')
-    }
     get addVehicle () {
         return $('//*[@resource-id="sk.prosoft.ptt.pop:id/ll_addremove_selection_add"]')
     }
@@ -45,7 +42,6 @@ class VehiclesAndDrivers {
     
 
     async addVehiclesAndDrivers(vehicles, HKVType, trainDriverNumber){
-        await this.vehiclesAndDriversSelector.click()
 
         //Zaradiť
         await expect(this.vehiclesAndDriversConfirmBtn).toBeDisabled()
