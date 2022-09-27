@@ -6,7 +6,7 @@ import { deviceName as _deviceName } from './android.info';
 config.capabilities = [{
     "appium:platformName": "Android",
     "appium:automationName": "UiAutomator2", 
-    "apiium:deviceName": _deviceName,
+    "appium:deviceName": _deviceName,
     "appium:maxInstance": 1,
     //"appium:platformVersion": "8",
     //"appium:deviceName": "Pixel 4 API Tiramisu",
