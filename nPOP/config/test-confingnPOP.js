@@ -38,7 +38,7 @@ export const config = {
         "platformName": "Android",
         //"appium:platformVersion": "8",
        //"appium:deviceName": "Android Device",
-        "appium:deviceName": "Pixel 4 API Tiramisu",
+        //"appium:deviceName": "Pixel 4 API Tiramisu",
 
         "appium:automationName": "UiAutomator2",
         //"appium:appPackage": "sk.zssk.mobapp.android.dev",
