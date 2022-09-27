@@ -3,9 +3,6 @@ export let licenceEIN
 
 class VehiclesAndDrivers {
 
-    get vehiclesAndDriversSelector () {
-        return $('//*[@resource-id="sk.prosoft.ptt.pop:id/ll_evod_vehicles_and_drivers"]')
-    }
     get addVehicle () {
         return $('//*[@resource-id="sk.prosoft.ptt.pop:id/ll_addremove_selection_add"]')
     }
@@ -44,15 +41,10 @@ class VehiclesAndDrivers {
     } 
     
 
-    
-    
-    
-
     async addVehiclesAndDrivers(vehicles, HKVType, trainDriverNumber){
-        await this.vehiclesAndDriversSelector.click()
 
         //Zaradiť
-        expect(!await this.vehiclesAndDriversConfirmBtn.isEnabled())
+        await expect(this.vehiclesAndDriversConfirmBtn).toBeDisabled()
         await this.addVehicle.click()
         await this.vehicleNumberInsert.setValue(vehicles)
         browser.touchPerform([{
@@ -73,31 +65,31 @@ class VehiclesAndDrivers {
             if(!await this.isDriverInVehicle.isEnabled()){
                 await this.isDriverInVehicle.click()
             }
-            expect(await this.isDriverInVehicle).toBeEnabled()
+            await expect(this.isDriverInVehicle).toBeEnabled()
             await Swipe.swipeUpAllScreen()
             await this.trainDriverInput.waitForDisplayed()
             await this.trainDriverInput.click()
             
             //Osobné číslo rušňovodiča
-            expect(await this.windowUpConfirm).toBeDisabled()
+            await expect(this.windowUpConfirm).toBeDisabled()
             await this.trainDriverNumberSelector.click()
-            expect(await this.evodInputSave).toBeDisabled()
+            await expect(this.evodInputSave).toBeDisabled()
             await this.trainDriverNumberInput.setValue(trainDriverNumber)
-            expect(await this.evodInputSave).toBeEnabled()
+            await expect(this.evodInputSave).toBeEnabled()
             await this.evodInputSave.click()
             
             //Kontrola EIN licencie
             licenceEIN = await this.licenceEINSelector.getText()
-            expect(await this.windowUpConfirm).toBeEnabled()
+            await expect(this.windowUpConfirm).toBeEnabled()
             await  this.windowUpConfirm.click()
             
             //Zaradenie rušňovodiča - HKV, POTVRDIŤ
-            expect(await $('android=new UiSelector().className("android.widget.LinearLayout").childSelector(new UiSelector().resourceId("sk.prosoft.ptt.pop:id/tv_layout_edittext_text").textContains("' + licenceEIN + '"))')).toBeDisplayed()
+            await expect($('android=new UiSelector().className("android.widget.LinearLayout").childSelector(new UiSelector().resourceId("sk.prosoft.ptt.pop:id/tv_layout_edittext_text").textContains("' + licenceEIN + '"))')).toBeDisplayed()
             while(!await this.vehicleChangeConfirm.isDisplayed()){
                 await Swipe.swipeUpAllScreen()
             }
             await this.vehicleChangeConfirm.click()
-            expect(await this.vehiclesAndDriversConfirmBtn.isEnabled())
+            await expect(this.vehiclesAndDriversConfirmBtn).toBeEnabled()
 
 
             // Potvrdiť Vozidlá a rušňovodiči

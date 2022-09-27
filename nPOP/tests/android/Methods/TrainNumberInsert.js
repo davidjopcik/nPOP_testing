@@ -25,7 +25,7 @@ class TrainNumberInsert {
     async dateTrainRouteSelect(trainNumber){
         trainNumberSelectionRouteDetailSelector = await $('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.TextView')
         console.log(await trainNumberSelectionRouteDetailSelector.getText());
-        expect(await trainNumberSelectionRouteDetailSelector.getText()).toContain(trainNumber)
+        await expect(await trainNumberSelectionRouteDetailSelector.getText()).toContain(trainNumber)
         await trainNumberSelectionRouteDetailSelector.click()
     }
 
