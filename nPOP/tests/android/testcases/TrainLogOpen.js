@@ -9,7 +9,7 @@ import TrainLog from "../Methods/TrainLog";
 import TrainNumberInsert from "../Methods/TrainNumberInsert";
 import VehiclesAndDrivers from "../Methods/VehiclesAndDrivers";
 
-export let Test_Data = {
+export let TrainLogOpen_data = {
     userName: "89",
     password: "Aa123456",
     role: "Sprievodca POP vo Vlaku",
@@ -21,7 +21,7 @@ export let Test_Data = {
     trainBreakingMode: "R+Mg"
 }
 
-let e = Test_Data
+let e = TrainLogOpen_data
 
 describe('TEST"', () => {
 

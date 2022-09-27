@@ -18,8 +18,8 @@ config.capabilities = [{
     specs: [
 
         // ---- TESTS -----
-        "nPOP/tests/android/testcases/TC_TEST.js",
-        //"nPOP/tests/android/testcases/TC_TEST.js",
+        //"nPOP/tests/android/testcases/TrainLogOpen.js",
+        "nPOP/tests/android/testcases/EinLicenceCheck.js",
         //"nPOP/tests/android/testcases/TC_TEST.js",
 
 
