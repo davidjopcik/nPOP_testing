@@ -10,6 +10,7 @@ class HelpFunctions{
         dateAlertMsgTrainTimeDeparture = dateAlertMsgTrainTimeDeparture[1]
         dateAlertMsgTrainTimeDeparture = dateAlertMsgTrainTimeDeparture.split(")",)
         dateAlertMsgTrainTimeDeparture = dateAlertMsgTrainTimeDeparture[0] */
+        text = text.split("")
         console.log(text);
         return text
     }
