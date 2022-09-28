@@ -50,6 +50,7 @@ class EvodMainScreen {
         if((await $('//*[@text="Naozaj si prajete spustiť synchronizáciu EVOD?"]')).isDisplayed()){
             await $('//*[@text="SPUSTIŤ SYNCHRONIZÁCIU"]').click()
         }
+        await this.trainLogOpenBtn.waitForDisplayed({timeout: 60000})
     }
 
 }

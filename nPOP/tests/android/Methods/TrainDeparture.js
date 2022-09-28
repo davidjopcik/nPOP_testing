@@ -29,7 +29,7 @@ class TrainDeparture {
         await expect(BasicFunction.confirmBtnSelector).toBeEnabled()
         await BasicFunction.confirmBtnClick()
 
-        // ---- TO DO ----
+        // Nacitanie datumu z dialogu a nastavenie cez time picker
         alertMsgTrainTimeDeparture = await $('//*[@resource-id="android:id/message" and contains(@text, "Zadaný dátum a čas odchodu vlaku nesmie byť menší ako plánovaný dátum a čas odchodu z vých. DB")]').getText()
         console.log(alertMsgTrainTimeDeparture);
 
@@ -50,14 +50,6 @@ class TrainDeparture {
 
         await expect(BasicFunction.confirmBtnSelector).toBeEnabled()
         await BasicFunction.confirmBtnClick()
-
-      
-
-
-        // ---- TO DO ----
-
-
-
     }
 
 }
