@@ -10,15 +10,16 @@
         "allure-report": "./node_modules/.bin/allure generate --clean ./test/reports/allure-results && allure open",
         "wdio": "wdio run wdio.conf.js"
     },
-    "keywords": ["webdriverio",
-    "appium"],
+    "keywords": [
+        "webdriverio",
+        "appium"
+    ],
     "author": "",
     "license": "ISC",
     "dependencies": {
         "mocha": "^9.2.2",
         "mocha-allure-reporter": "^1.4.0",
         "node-gyp": "^9.0.0",
-        "appium": "^1.22.0",
         "webdriverio": "^7.19.3"
     },
     "devDependencies": {
