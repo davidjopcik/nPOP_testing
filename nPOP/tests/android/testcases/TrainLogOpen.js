@@ -39,7 +39,7 @@ describe('TEST"', () => {
         await EvodMainScreen.evodOpen()
     });
 
-    it('Súpis vlaku',async () => {
+    it.only('Súpis vlaku',async () => {
         await EvodMainScreen.trainLogOpenClick()
         await TrainLog.trainLogOpen()
     });
